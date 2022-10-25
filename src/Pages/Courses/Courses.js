@@ -1,9 +1,13 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import {  Col, Container, Row } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
 import List from '../DynamicCourseList/List';
+import CourseCard from './CourseCard/CourseCard';
 
 
 const Courses = () => {
+    const courses = useLoaderData();
+    
     return (
         <Container>
             <Row>
@@ -11,8 +15,10 @@ const Courses = () => {
                     <List></List>
                 </Col>
                  <Col className='lg-8'>
-                    <h1>dsghd
-                    </h1>
+                   {
+                    courses.map(course => <CourseCard 
+                    key={course.id} course={course}> </CourseCard>)
+                   }
                  </Col>
             </Row>
         </Container>
