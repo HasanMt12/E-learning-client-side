@@ -5,6 +5,8 @@ import List from '../DynamicCourseList/List';
 import CourseCard from './CourseCard/CourseCard';
 
 
+
+
 const Courses = () => {
     const courses = useLoaderData();
     
@@ -17,8 +19,9 @@ const Courses = () => {
                  <Col className='lg-8'>
                    {
                     courses.map(course => <CourseCard 
-                    key={course.id} course={course}> </CourseCard>)
+                    key={course._id} course={course}> </CourseCard>)
                    }
+                  
                  </Col>
             </Row>
         </Container>
