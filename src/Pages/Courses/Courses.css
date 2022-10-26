@@ -1,0 +1,14 @@
+.courses-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 50px;
+}
+
+.course-card {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin-bottom: 200px;
+    margin-left: 50px;
+}

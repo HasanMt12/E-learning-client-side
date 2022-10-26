@@ -1,11 +1,15 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import  './Login.css'
 
 
 const Login = () => {
-     const { popUpLogin } = useContext(AuthContext);
+     const { popUpLogin, checkIn, setLoading } = useContext(AuthContext);
+const [error, setError] = useState('');
+
      const popUpGoogleProvider = new GoogleAuthProvider();
      const popUpGithubProvider = new GithubAuthProvider();
 
@@ -27,6 +31,40 @@ const Login = () => {
             .catch(error => console.error(error))
     }
 
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        checkIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+                setError('');
+                if(user.emailVerified){
+                    navigate(from, {replace: true});
+                }
+                else{
+                    alert('Your email is not verified. Please verify your email address.')
+                }
+            })
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
+    }
+
+
 
 
     return (
@@ -36,15 +74,15 @@ const Login = () => {
     <div className="col-left">
       <div className="login-form">
         <h2>Login</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <p>
-            <input type="email" placeholder="Email" required/>
+            <input name="email" type="email" placeholder="Enter email" required/>
           </p>
           <p>
-            <input type="password" placeholder="Password" required/>
+            <input name="password" type="password" placeholder="Password" required/>
           </p>
           <p>
-            <input className="btn" type="submit" value="Sing In" />
+            <input className="btn" type="submit"  />
           </p>
           <p>
             <a href="">Forget Password?</a>
@@ -67,5 +105,8 @@ const Login = () => {
         </div>
     );
 };
+
+
+
 
 export default Login;

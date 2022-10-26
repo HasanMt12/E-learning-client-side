@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CourseDetailsSingle from '../CourseDetailsSingle/CourseDetailsSingle';
+import './ListDetails.css'
 
 const ListDetails = () => {
     const courseDetails = useLoaderData()
     return (
-        <div>
+        <div >
             <h1>this is details{courseDetails.length}</h1>
             {
                 courseDetails.map(c => <CourseDetailsSingle

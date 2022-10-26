@@ -1,11 +1,15 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import './Registration.css'
 
 
 const Registration = () => {
-    const { popUpLogin } = useContext(AuthContext);
+    const { popUpLogin , generateUser, restoreUserProfile, verifyEmail} = useContext(AuthContext);
+       const [error, setError] = useState('');
+    // const [accepted, setAccepted] = useState(false);
      const popUpGoogleProvider = new GoogleAuthProvider();
      const popUpGithubProvider = new GithubAuthProvider();
 
@@ -27,6 +31,52 @@ const Registration = () => {
             })
             .catch(error => console.error(error))
     }
+    const handleSubmit = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log(name, photoURL, email, password);
+
+        generateUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+                form.reset();
+                handleRestoreUserProfile(name, photoURL);
+                handleEmailVerification();
+            })
+            .catch(e => {
+                console.error(e);
+                setError(e.message);
+            });
+    }
+
+    const handleRestoreUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+
+        restoreUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error));
+    }
+
+    const handleEmailVerification  = () => {
+        verifyEmail()
+        .then(() =>{})
+        .catch(error => console.error(error));
+    }
+
+    // const handleAccepted = event => {
+    //     setAccepted(event.target.checked)
+    // }
+
+ 
     return (
         <div className='main-div'>
             <div className="wrapper">
@@ -34,20 +84,23 @@ const Registration = () => {
     <div className="col-left">
       <div className="login-form">
         <h2>Register</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
             <p>
-            <input type="text" placeholder="UserName" required/>
+            <input name="name" type="text" placeholder="Your Name" />
+          </p>
+                <p>
+            <input name="photoURL" type="text" placeholder="Phot URL" />
           </p>
          
           <p>
-            <input type="email" placeholder="Email" required/>
+            <input name="email" type="email" placeholder="Enter email"/>
           </p>
           <p>
-            <input type="password" placeholder="Password" required/>
+            <input name="password" type="password" placeholder="Password" required/>
           </p>
-          <p>
-            <input className="btn" type="submit" value="Sing In" />
-          </p>
+          <Button variant="primary" type="submit" >
+                Register
+            </Button>
           
         </form>
       </div>
@@ -65,7 +118,14 @@ const Registration = () => {
 </div>
             
         </div>
+
+
     );
 };
+
+
+
+
+ 
 
 export default Registration;

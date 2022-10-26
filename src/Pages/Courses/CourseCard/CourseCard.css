@@ -1,27 +1,59 @@
-.list-container {
+.single-card {
+    width: 300px;
+    height: 518px;
+    top: 180px;
+    border: 1px solid #95a0a7;
+    border-radius: 0px 0px 8px 8px;
     box-sizing: border-box;
-    border: 1px solid gray;
-    margin-top: 100px;
+    padding: 7px;
+    position: relative;
+    box-shadow: inset 0 -3em 3em rgba(183, 180, 199, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(149, 151, 167, 0.3);
 }
 
-.btn-list p {
+.single-card img {
+    height: 286px;
+    width: 286px;
+    left: 7px;
+    top: 8px;
+    border-radius: 8px;
+}
+
+.exercise-name {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.exercise-info p {
+    margin-left: 14px;
+    margin-bottom: -10px;
+    line-height: 24px;
+}
+.text-link{
+    text-decoration: none;
+}
+
+/* .btn-common p {
     font-family: "Lato";
     font-style: normal;
     font-weight: 700;
     
-}
+   
+} */
 
 
 
-.btn-list {
+/* .btn-common {
     background-color: #143b5c;
     border: none;
     color: #ffffff;
     cursor: pointer;
-    font-family: 'BenchNine', Arial, sans-serif;
+    width: 180px;
     margin-left: 80px;
     margin-top: 80px;
-    margin-right: 80px;
     outline: none;
     padding: 6px 10px 5px;
     position: relative;
@@ -31,8 +63,8 @@
 
 }
 
-.btn-list:before,
-.btn-list:after {
+.btn-common:before,
+.btn-common:after {
     border-color: transparent;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
@@ -44,26 +76,26 @@
     width: 24px;
 }
 
-.btn-list:before {
+.btn-common:before {
     border-color: #212970;
     border-top-width: 2px;
     left: 0px;
     top: -5px;
 }
 
-.btn-list:after {
+.btn-common:after {
     border-bottom-width: 2px;
     border-color: #201f5f;
     bottom: -5px;
     right: 0px;
 }
 
-.btn-list:hover {
+.btn-common:hover {
     background-color: #215775;
 }
 
-.btn-list:hover:before,
-.btn-list:hover:after {
+.btn-common:hover:before,
+.btn-common:hover:after {
     height: 100%;
     width: 100%;
 }
@@ -72,6 +104,6 @@
     margin-left: 25px;
 }
 
-.btn-list:hover {
+.btn-common:hover {
     background-color: rgba(136, 136, 163, 0.555);
-}
+} */

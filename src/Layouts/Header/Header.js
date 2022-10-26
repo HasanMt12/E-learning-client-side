@@ -1,13 +1,22 @@
 import React, { useContext } from 'react';
+import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/Auth/AuthProvider';
+import ReactTooltip from "react-tooltip";
 
 
 const Header = () => {
-  const {user}= useContext(AuthContext);
+  const {user, logOff}= useContext(AuthContext);
+
+  const controlLogOff = () => {
+        logOff()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -16,19 +25,39 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link ><Link to='/blog'>Blog</Link></Nav.Link>
-            <Nav.Link ><Link to='/faq'>FAQ</Link></Nav.Link>
-            <Nav.Link ><Link to='/courses'>courses</Link></Nav.Link>
+            <Nav.Link ><Link className='text-decoration-none' to='/blog'>Blog</Link></Nav.Link>
+            <Nav.Link ><Link className='text-decoration-none' to='/faq'>FAQ</Link></Nav.Link>
+            <Nav.Link ><Link className='text-decoration-none' to='/courses'>courses</Link></Nav.Link>
           
           </Nav>
            <Nav>
-            <Link to='/register'>Register</Link>
-            <Link to='/login'>Login</Link>
+                            
+                    
+                           <> {
+                                user?.photoURL ? 
+                                    <>
+                                    <Button variant="light" onClick={controlLogOff}>Log out</Button>
+                                        <Image data-tip data-for="registerTip"
+                                    style={{ height: '30px' }}
+                                    roundedCircle
+                                    src={user?.photoURL}>
+                                </Image>
+                                
+                                <ReactTooltip id="registerTip" place="top" effect="solid">
+                                    {user?.displayName}
+                                </ReactTooltip>
+                                        
+                                    </>
+                                    :
+                                    <>
+                                        <Link to='/register'>Register</Link>
+                                        <Link to='/login'>Login</Link>
+                                    </>
+                            }
 
-            <Nav.Link href="#deets">{user?.displayName}</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+
+                        </>
+                       
             </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,12 @@
+.course-details-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-bottom: 50px;
+}
+
+.right-card{
+    margin-left: 150px;
+}
+.left-card{
+    margin-left: 200px;
+}
