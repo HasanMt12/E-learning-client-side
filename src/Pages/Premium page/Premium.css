@@ -1,49 +1,54 @@
-.courses-container {
+.premium-container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 2fr;
     margin-bottom: 50px;
-}
-
-.course-card {
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 200px;
+    margin-right: 50px;
     margin-left: 50px;
 }
 
+.pdf-container {
+    background-color: aliceblue;
+
+}
+
 @media screen and (max-width: 780px) {
-    .courses-container {
+    .premium-container {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 50px;
     }
 
-    .course-card {
+    /* .list-container {
+        margin-top: 10px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .card-container {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 30vw;
         margin-left: 20%;
-    }
+    } */
 }
 
 @media screen and (max-width: 550px) {
-    .courses-container {
+    .premium-container {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 50px;
     }
 
-    .course-card {
+    /* .list-container {
+        margin-top: 10px;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+
+    .card-container {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 30vw;
         margin-left: 20%;
-    }
-
-    .right-card {
-        margin-left: 5px;
-
-    }
+    } */
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Button, Image } from 'react-bootstrap';
+import {  Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,11 +7,12 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/Auth/AuthProvider';
 import ReactTooltip from "react-tooltip";
 import './Header.css'
+import logo from '../../assets/logo.png'
 
 
 
 const Header = () => {
-    const[show, setShow] = useState(true)
+    // const[show, setShow] = useState(true)
   const {user, logOff}= useContext(AuthContext);
 
   const controlLogOff = () => {
@@ -22,29 +23,28 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar className='nav-style mt-3 '  expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">E-learning</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link ><Link className='text-decoration-none' to='/blog'>Blog</Link></Nav.Link>
-            <Nav.Link ><Link className='text-decoration-none' to='/faq'>FAQ</Link></Nav.Link>
-            <Nav.Link ><Link className='text-decoration-none' to='/courses'>courses</Link></Nav.Link>
             
-            <button onClick={()=>setShow(!show)}>{
-                show?<button>white</button>:<button>dark</button>
-            }</button>
+
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='mt-4 ms-2 me-2'>
+      <Container >
+        <Navbar.Brand href="/"><img src="https://i.postimg.cc/nz54kNzq/lg.png" alt=""></img></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link href="/FAG">FAQ</Nav.Link>
+            <Nav.Link href="/courses">courses</Nav.Link>
+           
+            <input type="checkbox" id="check1" class="toggle"/>
+                        <label for="check1"></label>
           </Nav>
-           <Nav>
-                            
-                    
-                           <> {
+          <Nav>
+                  <> {
                                 user?.photoURL ? 
                                     <>
-                                    <Button variant="light" onClick={controlLogOff}>Log out</Button>
+                                    <Nav.Link variant="light" onClick={controlLogOff}>Log out</Nav.Link>
                                         <Image data-tip data-for="registerTip"
-                                    style={{ height: '30px' }}
+                                    style={{ height: '25px' ,margin:'2px'}}
                                     roundedCircle
                                     src={user?.photoURL}>
                                 </Image>
@@ -56,18 +56,20 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                        <Link to='/register'>Register</Link>
-                                        <Link to='/login'>Login</Link>
+                                      <Nav.Link href="/register">SignUp</Nav.Link>
+                                      <Nav.Link href="/login">SignIn</Nav.Link>
+                                        
                                     </>
                             }
 
 
                         </>
-                       
-            </Nav>
+           
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   
         </div>
     );
 };

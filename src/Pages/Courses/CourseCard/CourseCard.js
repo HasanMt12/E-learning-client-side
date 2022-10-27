@@ -14,7 +14,7 @@ const CourseCard = ({course}) => {
           <div className="course-info">
             <p className="course-name">{course_title}</p>
             <p className='text-dark'>Course Duration : <small className='text-success '>{time}</small></p>
-            <p>Course Duration : <small className='text-success fw-bold'>{projects}</small></p>
+            <p>Projects : <small className='text-success fw-bold'>{projects}</small></p>
             
           </div>
           <div className="btn-info">

@@ -2,15 +2,17 @@ import React from 'react';
 import './courseDetails.css'
 import { FaMedal , FaProjectDiagram,FaHandsHelping, FaDollarSign, FaArrowRight} from 'react-icons/fa';
 
-
+import Pdf from "react-to-pdf";
 import { Link } from 'react-router-dom';
+import { FaFileDownload } from 'react-icons/fa';
 
+
+
+const ref = React.createRef();
 const CourseDetailsSingle = ({c}) => {
     const {price,course_title,support,certificates,projects,resource,thumbnail,id,details}=c;
     return (
-        <div className=''>
-            <div></div>
-
+        <div>
 <div className='course-details-container'>
     <div className='left-card'>
         <div >
@@ -19,12 +21,15 @@ const CourseDetailsSingle = ({c}) => {
                 <small className='m-3'><span className='fw-bold text-decoration-underline '>Details : <br></br></span> <p className='text-semibold m-3'>{details}</p></small>
 
             </div>
+            <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>DownLoad course Details <FaFileDownload></FaFileDownload></button>}
+      </Pdf>
         </div>
         </div>
     
             <div className='right-card'>
 
-                <div className="card " style={{width: '30rem'}}>
+                <div className="card" style={{width: '30rem'}} ref={ref}>
                     <img src={thumbnail} className="card-img-top" alt="..."/>
                     <div className="card-body">
                         <h3 className="card-title text-style2">This course include:</h3>
@@ -46,10 +51,10 @@ const CourseDetailsSingle = ({c}) => {
                     </div>
 
                 </div>
-                </div>
+                </div></div>
             
             
-        </div>
+        
     );
 };
 

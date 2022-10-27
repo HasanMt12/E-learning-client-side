@@ -36,3 +36,38 @@
     -o-border-radius: 5px;
     text-align: center;
 }
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    .course-details-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .right-card {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .list-container {
+        margin-top: 10px;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+
+    .right-card {
+        margin-left:5px;
+
+    }
+}

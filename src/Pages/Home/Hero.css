@@ -38,10 +38,52 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     color: rgb(25, 51, 51);
-    
+
 }
 
 .text-student {
     color: rgb(22, 36, 36);
-    
+
+}
+
+@media screen and (max-width: 780px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .title1 {
+        font-size: 20px;
+    }
+
+    .title2 {
+        font-size: 16px;
+    }
+
+    .hero-right {
+        margin-right: 13%;
+    }
+
+   
+}
+
+@media screen and (max-width: 550px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .title1 {
+        font-size: 20px;
+    }
+
+    .title2 {
+        font-size: 16px;
+    }
+
+    .hero-right {
+        margin-right: 13%;
+    }
 }

@@ -1,6 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import './Registration.css'
@@ -9,7 +9,7 @@ import './Registration.css'
 const Registration = () => {
     const { popUpLogin , generateUser, restoreUserProfile, verifyEmail} = useContext(AuthContext);
        const [error, setError] = useState('');
-    // const [accepted, setAccepted] = useState(false);
+ 
      const popUpGoogleProvider = new GoogleAuthProvider();
      const popUpGithubProvider = new GithubAuthProvider();
 
@@ -35,7 +35,6 @@ const Registration = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
         // console.log(name, photoURL, email, password);
@@ -46,8 +45,9 @@ const Registration = () => {
                 console.log(user);
                 setError('');
                 form.reset();
-                handleRestoreUserProfile(name, photoURL);
+                handleRestoreUserProfile(name);
                 handleEmailVerification();
+                alert('pleas varify your email')
             })
             .catch(e => {
                 console.error(e);
@@ -72,9 +72,7 @@ const Registration = () => {
         .catch(error => console.error(error));
     }
 
-    // const handleAccepted = event => {
-    //     setAccepted(event.target.checked)
-    // }
+    
 
  
     return (
@@ -88,10 +86,6 @@ const Registration = () => {
             <p>
             <input name="name" type="text" placeholder="Your Name" />
           </p>
-                <p>
-            <input name="photoURL" type="text" placeholder="Phot URL" />
-          </p>
-         
           <p>
             <input name="email" type="email" placeholder="Enter email"/>
           </p>
@@ -101,6 +95,7 @@ const Registration = () => {
           <Button variant="primary" type="submit" >
                 Register
             </Button>
+            <p> {error}</p>
           
         </form>
       </div>
@@ -110,7 +105,7 @@ const Registration = () => {
         <h2>Login with</h2>
         <p onClick={handleGoogleLogin} className="btn btn-go" href="">Google</p>
         <p onClick={handleGithubLogin} className="btn btn-fb" href="">Github</p>
-       
+       <p> Already Register Please <Link to="/login">login</Link></p>
       </div>
     </div>
   </div>

@@ -1,7 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import  './Login.css'
 
@@ -17,7 +16,10 @@ const [error, setError] = useState('');
       popUpLogin(popUpGoogleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                
+                if(user){
+                    navigate(from, {replace: true});
+                }
             })
             .catch(error => console.error(error))
     }
@@ -26,7 +28,9 @@ const [error, setError] = useState('');
       popUpLogin(popUpGithubProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                if(user){
+                    navigate(from, {replace: true});
+                }
             })
             .catch(error => console.error(error))
     }
@@ -45,14 +49,14 @@ const [error, setError] = useState('');
         checkIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+              
                 form.reset();
                 setError('');
                 if(user.emailVerified){
                     navigate(from, {replace: true});
                 }
                 else{
-                    alert('Your email is not verified. Please verify your email address.')
+                    alert('Your email is not verified, Please check.')
                 }
             })
             .catch(error => {
@@ -84,8 +88,9 @@ const [error, setError] = useState('');
           <p>
             <input className="btn" type="submit"  />
           </p>
+          <p>{error}</p>
           <p>
-            <a href="">Forget Password?</a>
+            Not register please <Link to="/register">register</Link>
           </p>
         </form>
       </div>

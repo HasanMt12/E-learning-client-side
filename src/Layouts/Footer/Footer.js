@@ -4,6 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
+      <div>
         <div className="site-footer ">
       <div className="container">
         <div className="row">
@@ -40,8 +41,8 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-sm-6 col-xs-12">
-            <a className="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-         <a href="#">Scanfcode</a>.
+            <a className="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+         <a href="/">Hasan Mt</a>.
             </a>
           </div>
 
@@ -56,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
 </div>
-        
+        </div>
     );
 };
 
