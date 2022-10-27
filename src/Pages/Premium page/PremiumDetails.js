@@ -2,9 +2,9 @@ import React,{useContext} from 'react';
 import { Button, Card, Image } from 'react-bootstrap';
 import { AuthContext } from '../../Context/Auth/AuthProvider';
 import './Premium.css'
+import Lottie from "lottie-react";
+import payment from "../../assets/payment.json";
 
-
-import { FaFileDownload } from 'react-icons/fa';
 
 
 
@@ -19,7 +19,7 @@ const PremiumDetails = ({pd}) => {
             <div className='premium-container'>
                 <div className='m-3'>
                            
-                        
+                        <div className='w-50 lottie'> <Lottie animationData={payment}loop ={true}/></div>
 
         <Card className="text-center">
 
@@ -32,6 +32,7 @@ const PremiumDetails = ({pd}) => {
                                 <Card.Header>{user?.displayName }</Card.Header>
         <Card.Title><h4>{user?.email}</h4></Card.Title>
         <Card.Text>
+         
         
         </Card.Text>
      

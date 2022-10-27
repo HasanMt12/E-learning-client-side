@@ -6,8 +6,10 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+import blog from "../../assets/bolg.json";
+import Lottie from "lottie-react";
 
-// Demo styles, see 'Styles' section below for some notes on use.
+
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 const Blog = () => {
@@ -15,6 +17,7 @@ const Blog = () => {
 
 
         <div className='m-5'>
+            <div className='w-50 lottie'> <Lottie animationData={blog} loop={true}/></div >
             <Accordion>
             
             <AccordionItem>
@@ -40,9 +43,11 @@ Cross-origin resource sharing (CORS) allows AJAX requests to skip the Same-origi
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                        Firebase helps you develop high-quality apps, grow your user base, and earn more money. Each feature works independently, and they work even better together.
+                       Firebase helps you develop high-quality apps, grow your user base, and earn more money. Each feature works independently, and they work even better together.
 
 Firebase provides detailed documentation and cross-platform SDKs to help you build and ship apps on Android, iOS, the web, C++, and Unity.
+
+Usually, authentication by a server entails the use of a user name and password. Other ways to authenticate can be through cards, retina scans, voice recognition, and fingerprints.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
