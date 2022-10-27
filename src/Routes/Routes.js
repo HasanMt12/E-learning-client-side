@@ -9,7 +9,7 @@ import PremiumAccess from "../Pages/Premium page/PremiumAccess";
 import Blog from "../Pages/blog/Blog";
 import Error from "../Pages/ErrorPage/Error";
 import PrivetRoutes from "./PrivetRoutes";
-
+import Faq from "../Pages/Faq";
 
 export const routes = createBrowserRouter([
     {
@@ -24,12 +24,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element:<Courses></Courses>,
-                loader: ()=> fetch('http://localhost:5000/courses')
+                loader: ()=> fetch('https://p-hero-assignment10.vercel.app/courses')
             },
             {
                 path:'/courses/:id',
                 element: <ListDetails></ListDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://p-hero-assignment10.vercel.app/courses/${params.id}`)
             },
             {
                 path:'/register',
@@ -43,12 +43,17 @@ export const routes = createBrowserRouter([
              {
                 path:'/checkout/:id',
                 element: <PrivetRoutes><PremiumAccess></PremiumAccess></PrivetRoutes>,
-                 loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                 loader: ({params}) => fetch(`https://p-hero-assignment10.vercel.app/courses/${params.id}`)
                
             },
             {
                 path:'/blog',
                 element:<Blog></Blog>
+            },
+            {
+                path:'/FAQ',
+                element: <Faq></Faq>
+
             }
             
         ]

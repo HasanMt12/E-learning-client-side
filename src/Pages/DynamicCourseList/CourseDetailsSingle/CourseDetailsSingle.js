@@ -43,7 +43,7 @@ const CourseDetailsSingle = ({c}) => {
                     </ul>
                    
                     <div className="card-body"> <span className='m-4'> Course Rate - <small className='text-success fw-bold fs-2'><FaDollarSign></FaDollarSign>{price}</small></span>
-                        <p  className="btn btn-info "><Link className='text-dark' to={`/checkout/${id}`}>premium <FaArrowRight></FaArrowRight> </Link></p>
+                        <p  className="btn btn-secondary "><Link className='text-light' to={`/checkout/${id}`}>premium <FaArrowRight></FaArrowRight> </Link></p>
                         
                     </div>
 

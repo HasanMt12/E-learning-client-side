@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import './Registration.css'
+import Swal from 'sweetalert2'
 
 
 const Registration = () => {
@@ -47,7 +48,15 @@ const Registration = () => {
                 form.reset();
                 handleRestoreUserProfile(name);
                 handleEmailVerification();
-                alert('pleas varify your email')
+                Swal.fire({
+  title: 'verified your email, please check',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  }
+})
             })
             .catch(e => {
                 console.error(e);

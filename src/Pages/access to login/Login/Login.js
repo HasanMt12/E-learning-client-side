@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Auth/AuthProvider';
 import  './Login.css'
+import Swal from 'sweetalert2'
 
 
 const Login = () => {
@@ -56,7 +57,15 @@ const [error, setError] = useState('');
                     navigate(from, {replace: true});
                 }
                 else{
-                    alert('Your email is not verified, Please check.')
+                    Swal.fire({
+  title: 'verified your email, please check',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  }
+})
                 }
             })
             .catch(error => {

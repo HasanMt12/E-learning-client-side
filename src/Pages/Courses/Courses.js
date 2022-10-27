@@ -15,7 +15,7 @@ const Courses = () => {
     return (
         <div className='courses-container'>
             
-                <div >
+                <div  >
                     <List></List>
                 </div>
                  <div className='course-card'>

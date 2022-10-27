@@ -1,17 +1,19 @@
 import React, { useContext, useState } from 'react';
-import {  Image } from 'react-bootstrap';
+import {  Button, Image, InputGroup } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/Auth/AuthProvider';
 import ReactTooltip from "react-tooltip";
 import './Header.css'
-import logo from '../../assets/logo.png'
+
+
+
 
 
 
 const Header = () => {
+
     // const[show, setShow] = useState(true)
   const {user, logOff}= useContext(AuthContext);
 
@@ -25,26 +27,28 @@ const Header = () => {
         <div>
             
 
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='mt-4 ms-2 me-2'>
+    <Navbar collapseOnSelect expand="lg" bg="secondary" variant="light" className='mt-4  mx-4 rounded-5'>
       <Container >
-        <Navbar.Brand href="/"><img src="https://i.postimg.cc/nz54kNzq/lg.png" alt=""></img></Navbar.Brand>
+        <Navbar.Brand href="/"><img src="https://i.postimg.cc/QNyp2f5H/download-removebg-preview.png" alt=""></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/FAG">FAQ</Nav.Link>
-            <Nav.Link href="/courses">courses</Nav.Link>
+          <Nav className="me-auto ">
+            <Nav.Link className='text-light fw-bold fs-5' href="/blog">Blog</Nav.Link>
+            <Nav.Link className='text-light fw-bold fs-5' href="/FAQ">FAQ</Nav.Link>
+            <Nav.Link className='text-light fw-bold fs-5 me-2' href="/courses">courses</Nav.Link>
            
             <input type="checkbox" id="check1" class="toggle"/>
                         <label for="check1"></label>
+
+                        
           </Nav>
           <Nav>
                   <> {
                                 user?.photoURL ? 
                                     <>
-                                    <Nav.Link variant="light" onClick={controlLogOff}>Log out</Nav.Link>
+                                    <Nav.Link className='text-light fw-bold fs-5 me-2' onClick={controlLogOff}>Log out</Nav.Link>
                                         <Image data-tip data-for="registerTip"
-                                    style={{ height: '25px' ,margin:'2px'}}
+                                    style={{ height: '42px' ,margin:'2px'}}
                                     roundedCircle
                                     src={user?.photoURL}>
                                 </Image>
@@ -56,8 +60,8 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                      <Nav.Link href="/register">SignUp</Nav.Link>
-                                      <Nav.Link href="/login">SignIn</Nav.Link>
+                                      <Nav.Link className='text-light fw-bold fs-5' href="/register">Sign Up</Nav.Link>
+                                      <Nav.Link className='text-light fw-bold fs-5' href="/login">Sign In</Nav.Link>
                                         
                                     </>
                             }

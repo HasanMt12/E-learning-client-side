@@ -5,16 +5,16 @@ import './List.css'
 const List = () => {
      const [lists, setLists] = useState([])
      useEffect(()=>{
-        fetch('http://localhost:5000/courses-list')
+        fetch('https://p-hero-assignment10.vercel.app/courses-list')
         .then(res => res.json())
         .then(data => setLists(data));
 
      },[])
     return (
         <div className='list-container pb-5 ms-2'>
-            <h3 className='fw-bold text-center '>course list: {lists.length}</h3>
+            <h3 className='fw-bold text-center text-bg-secondary text-white rounded-3'>course list: {lists.length}</h3>
             {
-                lists.map(list =>  <p className='btn btn-outline-info w-75 ms-4 ' key={list.id}>
+                lists.map(list =>  <p className='btn btn-secondary w-75 ms-4 ' key={list.id}>
                      <Link to={`/courses/${list.id}`}>{list.course_title}</Link>
                     </p>)
             }

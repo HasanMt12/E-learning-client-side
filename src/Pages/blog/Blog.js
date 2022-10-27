@@ -20,7 +20,7 @@ const Blog = () => {
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                       What is Cors ?
+                     < p className='text-info fw-bold '>What is Cors ?</ p>  
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
@@ -35,7 +35,7 @@ Cross-origin resource sharing (CORS) allows AJAX requests to skip the Same-origi
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                       Why are you using firebase ?
+                      < p className='text-info fw-bold '> Why are you using firebase ?</ p>
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
@@ -49,7 +49,7 @@ Firebase provides detailed documentation and cross-platform SDKs to help you bui
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                        How does the private route work ?
+                      < p className='text-info fw-semibold '>How does the private route work ?</ p>  
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
@@ -64,7 +64,7 @@ Firebase provides detailed documentation and cross-platform SDKs to help you bui
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                       What is Node ? How does Node work ?
+                      < p className='text-info fw-bold '> What is Node ? How does Node work ?</ p>
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>

@@ -104,5 +104,6 @@ input[type="checkbox"].toggle:checked+label::after {
   transform: translateX(100%);
   background-color: hsl(100, 70%, 60%);
   
+  
 }
 

@@ -11,13 +11,13 @@ const Home = () => {
         <div>
             <div className='hero-container'>
                 <div className='hero-left'>
-                    <div className='hero-title'>
+                    <div className='hero-title '>
                         <h2 className='title1 mb-3'>Learn From The Expert</h2>
                         <h2 className='title2 '>Learn 100% online with World-class
                             universities and industry Experts</h2>
                             
-                        <a className='me-3 btn btn-outline-info w-25 hero-btn' href='/login'>Join for Free</a>
-                        <a className='me-3 ms-2 btn btn-outline-info w-25 hero-btn' href='/courses'>Our courses</a>
+                        <a className='me-3 btn btn-outline-secondary w-25 hero-btn' href='/login'>Join for Free</a>
+                        <a className='me-3 ms-2 btn btn-outline-secondary w-25 hero-btn' href='/courses'>Our courses</a>
                     </div>
                 </div>
                 <div className='hero-right'>
@@ -25,8 +25,8 @@ const Home = () => {
                 </div>
             </div>
             <div className=" pt-5 ">
-                <div className="text-center"> 
-                <div className='bg-success-students p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
+                <div className="text-center t"> 
+                <div className='bg-success-students bg-secondary mx-4 rounded-5 p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
                 <p className="pb-2 text-center text-student ">Practice isn’t the thing you do once your good. It’s the thing you do that makes you good.
                 </p></div>
             
@@ -36,16 +36,16 @@ const Home = () => {
                     <div className="border-2 shadow-sm text-center bg-light pb-2 ">
                         <img className="img-fluid pb-1" src="https://i.postimg.cc/rw7nc1bN/depositphotos-5879578-stock-photo-portrait-of-young-businessman-with.webp" alt=""/>
                         <h5>Tonmoy islam</h5>
-                        <small>UIUX Designer</small><br></br>
+                        <small>Ruby developer</small><br></br>
                         <small>“Even more important than knowledge is confidence, which I have gained through my learning journey. No matter what you are looking to learn, or gain confidence in, Coursera has something for you.”</small>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
                     <div className="border-2 shadow-sm text-center bg-light pb-2">
                         <img className="img-fluid pb-1" src="https://i.postimg.cc/yYjCVbXX/shutterstock-285785000.jpg" alt=""/>
-                        <h5>Meherima</h5>
+                        <h5>Mou</h5>
                         <small>Swift Developer</small> <br></br>
-                        <small>“I was able to prove to potential employers that I have a solid understanding of computers and hardware—and started to receive real, viable job offers.”</small>
+                        <small>“Even more important than knowledge is confidence, which I have gained through my learning journey. No matter what you are looking to learn, or gain confidence in, Coursera has something for you.”</small>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
@@ -61,7 +61,7 @@ const Home = () => {
                         <img className="img-fluid pb-1" src="https://i.postimg.cc/yYjCVbXX/shutterstock-285785000.jpg" alt=""/>
                         <h5>Sadia Afreen</h5>
                         <small>Web Developer</small> <br></br>
-                        <small>“I was able to prove to potential employers that I have a solid understanding of computers and hardware—and started to receive real, viable job offers.”</small>
+                        <small>“Even more important than knowledge is confidence, which I have gained through my learning journey. No matter what you are looking to learn, or gain confidence in, Coursera has something for you.”</small>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const Home = () => {
     </div>
     <div className=" pt-5 ">
                 <div className="text-center"> 
-                <div className='bg-success-students p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
+                <div className='bg-success-students bg-secondary rounded-5 mx-4 p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
                 <p className="pb-2 text-center text-student ">Practice isn’t the thing you do once your good. It’s the thing you do that makes you good.
                 </p></div></div></div>
 
@@ -79,7 +79,7 @@ const Home = () => {
                     <div className='hero-title'>
                         <h3 className='title1'> Try to understand your web understanding? </h3><br></br>
                     <small className='title2'>This short quiz will sort you out. Answer a few simple questions to get perfect practice for web career .</small><br></br>
-                    <a className='me-3 btn btn-outline-info w-25 hero-btn' href='/login'>Start Quiz</a>
+                    <a className='me-3 btn btn-outline-secondary w-25 hero-btn' href='/login'>Start Quiz</a>
 
                         </div>
                     </div>
@@ -90,7 +90,7 @@ const Home = () => {
              <div className=" pt-5 ">
                 <div className="text-center"> 
                 <div className='bg-success-students p-3'>
-                <p className="pb-2 text-center text-student ">Business 
+                <p className='bg-success-students bg-secondary rounded-5 mx-4 p-3'>Business 
                 </p></div></div></div>
 
         <div>

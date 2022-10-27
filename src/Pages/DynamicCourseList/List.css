@@ -1,6 +1,12 @@
 .list-container {
     box-sizing: border-box;
     border: 1px solid gray;
+    border-radius: 10px;
     margin-top: 100px;
+    margin-left: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 

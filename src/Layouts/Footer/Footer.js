@@ -4,13 +4,13 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-      <div>
-        <div className="site-footer ">
+      <div className=''>
+        <div className="site-footer rounded-5 mx-4">
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <h6>About</h6>
-            <p className="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <p className="text-justify">Start, switch, or advance your career with more than 6 courses, Professional Certificates</p>
           </div>
 
           <div className="col-xs-6 col-md-3">

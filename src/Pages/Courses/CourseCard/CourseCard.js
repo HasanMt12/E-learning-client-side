@@ -18,7 +18,7 @@ const CourseCard = ({course}) => {
             
           </div>
           <div className="btn-info">
-            <button  className="btn btn-info mt-5 "> 
+            <button  className="btn btn-secondary mt-5 "> 
             <Link className='text-link' to={`/courses/${course.id}`}>{ course.course_title} <small className='text-dark  fw-semibold'>course details <FaArrowRight></FaArrowRight></small></Link>
             </button>
             </div>

@@ -11,7 +11,7 @@ import { FaFileDownload } from 'react-icons/fa';
 
 const PremiumDetails = ({pd}) => {
     const {user}= useContext(AuthContext);
-    const {price,id,course_title,premium} = pd;
+    const {price,id,course_title,premium,details,img} = pd;
     console.log(user)
     
     return (
@@ -32,7 +32,7 @@ const PremiumDetails = ({pd}) => {
                                 <Card.Header>{user?.displayName }</Card.Header>
         <Card.Title><h4>{user?.email}</h4></Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+        
         </Card.Text>
      
       </Card.Body>
@@ -40,18 +40,19 @@ const PremiumDetails = ({pd}) => {
     </Card>
                 </div>
                 <div className=' pdf-container'>
-                  <h1>{premium}</h1> <div className="pdfFile">
+                  <h3 className='text-center m-2'>{premium}</h3> <div className="pdfFile">
      
       
     </div>
-                    <Card className="text-center m-3">
-      <Card.Header>{course_title}</Card.Header>
+                    <Card className="r m-3">
+      <Card.Header className='text-center' >{course_title}</Card.Header>
       <Card.Body>
         <Card.Title></Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+           {details}
         </Card.Text>
-       
+        <img className='w-25 h-50' src={img} alt=""></img>
+        
       </Card.Body>
      
     </Card>
@@ -60,6 +61,7 @@ const PremiumDetails = ({pd}) => {
 
                 </div>
             </div>
+             
             
         </div>
     );
