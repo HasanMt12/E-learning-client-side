@@ -1,11 +1,11 @@
-# Quiz on Quark (b6-Assignment-9) Repository
+# b610-learning-platform-client-side-HasanMt12
 
 
 ## Live Link
-Hosted in Netlify ->[QuizPlatform](https://aesthetic-crisp-244e61.netlify.app/statistics)
+Hosted in FireBase ->[Courses site](https://aesthetic-crisp-244e61.netlify.app/statistics)
 
 
-Hosted in Netlify -> [Quiz on Quark](https://whimsical-bunny-1542da.netlify.app/)
+Hosted in Firebase (home page) -> [Training Sage](https://e-learning-client-side-b-6.web.app/)
 
 ## Context API
 
@@ -15,8 +15,8 @@ Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
 Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
 ## Resources & Credits
-Tailwind Components -> 
-[DaisyUi](https://daisyui.com/)
+Bootstrap Framwork -> 
+[react Bootstrap](https://react-bootstrap.github.io/)
 
 
 ## Other Resources
