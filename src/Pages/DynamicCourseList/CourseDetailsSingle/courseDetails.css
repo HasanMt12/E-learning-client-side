@@ -4,9 +4,35 @@
     margin-bottom: 50px;
 }
 
-.right-card{
-    margin-left: 150px;
-}
-.left-card{
+.right-card {
     margin-left: 200px;
+
+}
+
+
+.left-card {
+    box-sizing: border-box;
+    margin-top: 260px;
+    border: 1px solid rgb(118, 173, 173);
+    border-right: 0;
+    border-radius: 10px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+    margin-right: -200px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.text-style2 {
+    background-color: rgb(118, 173, 173);
+    color: rgb(19, 20, 20);
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-align: center;
 }

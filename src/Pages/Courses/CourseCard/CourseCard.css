@@ -1,7 +1,7 @@
 .single-card {
     width: 300px;
     height: 518px;
-    top: 180px;
+    top: 40px;
     border: 1px solid #95a0a7;
     border-radius: 0px 0px 8px 8px;
     box-sizing: border-box;
@@ -19,91 +19,25 @@
     border-radius: 8px;
 }
 
-.exercise-name {
+.course-name {
     font-family: "Lato";
     font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
+    font-weight: 600;
+    font-size: 25px;
     line-height: 25px;
+    margin-top: 10px;
+    color: rgb(78, 126, 126);
 }
 
-.exercise-info p {
-    margin-left: 14px;
-    margin-bottom: -10px;
+.course-info p {
+    padding-left: 20px;
+    margin-bottom: 10px;
     line-height: 24px;
+    font-weight: 400;
+    color: rgb(78, 126, 126);
+    font-size: 15px;
 }
-.text-link{
+
+.text-link {
     text-decoration: none;
 }
-
-/* .btn-common p {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 700;
-    
-   
-} */
-
-
-
-/* .btn-common {
-    background-color: #143b5c;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    width: 180px;
-    margin-left: 80px;
-    margin-top: 80px;
-    outline: none;
-    padding: 6px 10px 5px;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 10px;
-
-}
-
-.btn-common:before,
-.btn-common:after {
-    border-color: transparent;
-    -webkit-transition: all 0.25s;
-    transition: all 0.25s;
-    border-style: solid;
-    border-width: 0;
-    content: "";
-    height: 24px;
-    position: absolute;
-    width: 24px;
-}
-
-.btn-common:before {
-    border-color: #212970;
-    border-top-width: 2px;
-    left: 0px;
-    top: -5px;
-}
-
-.btn-common:after {
-    border-bottom-width: 2px;
-    border-color: #201f5f;
-    bottom: -5px;
-    right: 0px;
-}
-
-.btn-common:hover {
-    background-color: #215775;
-}
-
-.btn-common:hover:before,
-.btn-common:hover:after {
-    height: 100%;
-    width: 100%;
-}
-
-.fa-arrow-right {
-    margin-left: 25px;
-}
-
-.btn-common:hover {
-    background-color: rgba(136, 136, 163, 0.555);
-} */

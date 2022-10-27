@@ -1,0 +1,47 @@
+.hero-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.hero-title {
+    margin: 50px 50px;
+    padding-left: 30px;
+    padding-top: 70px;
+
+}
+
+.title1 {
+    color: rgb(78, 126, 126);
+    font-size: 40px;
+    font-weight: 500;
+
+
+}
+
+.title2 {
+    color: rgb(78, 126, 126);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+
+}
+
+.bg-success-students {
+    background: linear-gradient(#a4c6eb, #86b8e47e);
+    margin: 0 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: rgb(25, 51, 51);
+    
+}
+
+.text-student {
+    color: rgb(22, 36, 36);
+    
+}

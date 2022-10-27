@@ -11,14 +11,14 @@ const List = () => {
 
      },[])
     return (
-        <div className='list-container'>
-            <h1>course list: {lists.length}</h1>
+        <div className='list-container pb-5 ms-2'>
+            <h3 className='fw-bold text-center '>course list: {lists.length}</h3>
             {
-                lists.map(list =>  <p className='btn-list' key={list.id}>
+                lists.map(list =>  <p className='btn btn-outline-info w-75 ms-4 ' key={list.id}>
                      <Link to={`/courses/${list.id}`}>{list.course_title}</Link>
                     </p>)
             }
-            <h1>sd</h1>
+           
         </div>
     );
 };

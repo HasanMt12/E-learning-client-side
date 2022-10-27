@@ -1,11 +1,12 @@
 import React from 'react';
 import './courseDetails.css'
+import { FaMedal , FaProjectDiagram,FaHandsHelping, FaDollarSign, FaArrowRight} from 'react-icons/fa';
 
 
-import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CourseDetailsSingle = ({c}) => {
-    const {img,price,course_title,support,certificates}=c;
+    const {price,course_title,support,certificates,projects,resource,thumbnail,id,details}=c;
     return (
         <div className=''>
             <div></div>
@@ -13,35 +14,35 @@ const CourseDetailsSingle = ({c}) => {
 <div className='course-details-container'>
     <div className='left-card'>
         <div >
-        <Card >
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-                <Card.Title>{course_title}</Card.Title>
-                <Card.Text>
-                    {price}
-                </Card.Text>
-                 
-            </Card.Body>
-        </Card>
-        </div></div>
+            <div className='details' >
+                <h2 className='m-3'>{course_title}</h2>
+                <small className='m-3'><span className='fw-bold text-decoration-underline '>Details : <br></br></span> <p className='text-semibold m-3'>{details}</p></small>
+
+            </div>
+        </div>
+        </div>
     
             <div className='right-card'>
 
                 <div className="card " style={{width: '30rem'}}>
-                    <img src="..." className="card-img-top" alt="..."/>
+                    <img src={thumbnail} className="card-img-top" alt="..."/>
                     <div className="card-body">
-                        <h5 className="card-title">this course include:</h5>
-                        <p className="card-text">  {certificates}</p>
+                        <h3 className="card-title text-style2">This course include:</h3>
+                     
                     </div>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">An item</li>
-                        <li className="list-group-item">A second item</li>
-                        <li className="list-group-item">A third item</li>
+                    <ul className="list-group list-group-flush m-4">
+                        <li className="list-group-item"><FaMedal></FaMedal> {certificates}</li>
+                        <li className="list-group-item"><FaProjectDiagram></FaProjectDiagram>  {projects}</li>
+                        <li className="list-group-item"> <FaHandsHelping></FaHandsHelping> {support}</li>
+                        <li className="list-group-item">  <FaMedal></FaMedal> {certificates}</li>
                     </ul>
-                    <div className="card-body">
-                        <button  className="card-link">Card link</button>
-                        <button  className="card-link">Another link</button>
+                   
+                    <div className="card-body"> <span className='m-4'> Course Rate - <small className='text-success fw-bold fs-2'><FaDollarSign></FaDollarSign>{price}</small></span>
+                        <p  className="btn btn-info "><Link className='text-dark' to={`/checkout/${id}`}>premium <FaArrowRight></FaArrowRight> </Link></p>
+                        
                     </div>
+
+                    
                     </div>
 
                 </div>
