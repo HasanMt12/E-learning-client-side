@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <div className=" pt-5 ">
                 <div className="text-center t"> 
-                <div className='text-center text-light fw-bold bg-secondary mx-4 rounded-5 p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
+                <div className='text-center text-light fw-bold bg-secondary mx-4 rounded-5 p-3'><h1 className="fw-bold  ">Read stories from the Training Sage community.</h1>
                 <p className="pb-2 text-center text-student ">Practice isn’t the thing you do once your good. It’s the thing you do that makes you good.
                 </p></div>
             
@@ -70,7 +70,7 @@ const Home = () => {
     </div>
     <div className=" pt-5 ">
                 <div className="text-center"> 
-                <div className='text-center text-light fw-bold bg-secondary rounded-5 mx-4 p-3'><h1 className="fw-bold  ">Read stories from the Mt community.</h1>
+                <div className='text-center text-light fw-bold bg-secondary rounded-5 mx-4 p-3'><h1 className="fw-bold  ">Practice from the Training Sage community.</h1>
                 <p className="pb-2 text-center text-student ">Practice isn’t the thing you do once your good. It’s the thing you do that makes you good.
                 </p></div></div></div>
 
@@ -79,7 +79,7 @@ const Home = () => {
                     <div className='hero-title'>
                         <h3 className='title1'> Try to understand your web understanding? </h3><br></br>
                     <small className='title2'>This short quiz will sort you out. Answer a few simple questions to get perfect practice for web career .</small><br></br>
-                    <a className='me-3 btn btn-outline-secondary w-25 hero-btn' href='https://aesthetic-crisp-244e61.netlify.app/'>Start Quiz</a>
+                    <a className='me-3 btn btn-outline-secondary w-25 hero-btn' href='https://whimsical-bunny-1542da.netlify.app/' target="_blank">Start Quiz</a>
 
                         </div>
                     </div>
@@ -93,7 +93,7 @@ const Home = () => {
                         <p className='text-light text-center fw-bold bg-secondary rounded-5 mx-4 p-3'>Business 
                         </p>
                     </div>
-                    <div className='my-3'><img className='mx-2' src='https://i.postimg.cc/wTN57dL8/company-2.png' alt="" ></img>
+                    <div className='my-3'><img className='mx-2' src='https://whimsical-bunny-1542da.netlify.app/' alt="" ></img>
                     <img src='https://i.postimg.cc/qvP7WFjk/company-3.png' alt="" ></img>
                     </div>
                 </div>

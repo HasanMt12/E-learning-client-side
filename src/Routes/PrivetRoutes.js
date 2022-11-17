@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Button, Spinner } from 'react-bootstrap';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Context/Auth/AuthProvider';
 
@@ -8,7 +9,16 @@ const PrivetRoutes = ({children}) => {
     const location = useLocation();
 
     if(loading){
-        return  <h1>loding....</h1>
+        return  <Button variant="primary" disabled>
+        <Spinner
+          as="span"
+          animation="grow"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+        />
+        Loading...
+      </Button>
     }
 
     if(!user){

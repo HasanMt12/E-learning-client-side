@@ -14,7 +14,7 @@ const Registration = () => {
      const popUpGoogleProvider = new GoogleAuthProvider();
      const popUpGithubProvider = new GithubAuthProvider();
 
-
+// google login
       const handleGoogleLogin = () => {
       popUpLogin(popUpGoogleProvider)
             .then(result => {
@@ -23,7 +23,9 @@ const Registration = () => {
             })
             .catch(error => console.error(error))
     }
+ 
 
+    // github login
      const handleGithubLogin = () => {
       popUpLogin(popUpGithubProvider)
             .then(result => {
@@ -32,6 +34,8 @@ const Registration = () => {
             })
             .catch(error => console.error(error))
     }
+
+  
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -49,14 +53,14 @@ const Registration = () => {
                 handleRestoreUserProfile(name);
                 handleEmailVerification();
                 Swal.fire({
-  title: 'verified your email, please check',
-  showClass: {
-    popup: 'animate__animated animate__fadeInDown'
-  },
-  hideClass: {
-    popup: 'animate__animated animate__fadeOutUp'
-  }
-})
+                    title: 'verified your email, please check',
+                    showClass: {
+                      popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                      popup: 'animate__animated animate__fadeOutUp'
+                    }
+                  })
             })
             .catch(e => {
                 console.error(e);

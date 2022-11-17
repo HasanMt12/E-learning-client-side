@@ -21,6 +21,8 @@ const CourseDetailsSingle = ({c}) => {
                 <small className='m-3'><span className='fw-bold text-decoration-underline '>Details : <br></br></span> <p className='text-semibold m-3'>{details}</p></small>
 
             </div>
+
+            {/* pdf use from react-pdf */}
             <Pdf targetRef={ref} filename="code-example.pdf">
         {({ toPdf }) => <p className='btn btn-secondary text-light' onClick={toPdf}>DownLoad course Details <FaFileDownload></FaFileDownload></p>}
       </Pdf>
