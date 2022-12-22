@@ -2,10 +2,10 @@
 
 
 ## Live Link
-Hosted in FireBase ->[Courses site](https://aesthetic-crisp-244e61.netlify.app/statistics)
 
 
-Hosted in Firebase (home page) -> [Training Sage](https://e-learning-client-side-b-6.web.app/)
+
+Hosted in Firebase [Training Sage] ->(https://e-learning-client-side-b-6.web.app/)
 
 ## Context API
 
